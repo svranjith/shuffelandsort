@@ -2,32 +2,33 @@
 
 const foo = [{
     value: 1,
-    colorCode: '#6F98A8'
+    colorCode: '#6f98a8'
 }, {
     value: 2,
-    colorCode: '#72c3dc'
+    colorCode: '#2b8ead'
 }, {
     value: 3,
-    colorCode: '#333333'
+    colorCode: '#2f454e'
 }, {
     value: 4,
-    colorCode: '#72c3dc'
+    colorCode: '#2b8ead'
 }, {
     value: 5,
-    colorCode: '#333333'
+    colorCode: '#2f454e'
 }, {
     value: 6,
-    colorCode: '#BFBFBF'
+    colorCode: '#bfbfbf'
 }, {
     value: 7,
-    colorCode: '#BFBFBF'
+    colorCode: '#bfbfbf'
 }, {
     value: 8,
-    colorCode: '#72c3dc'
+    colorCode: '#6f98a8'
 }, {
     value: 9,
-    colorCode: '#333333'
+    colorCode: '#2f454e'
 }]
+
 
 function commonFunction() {
     let element='';
@@ -49,17 +50,7 @@ function shuffel() {
 }
 
 function sorting() {
-    for (let i = 0; i < foo.length; i++) {
-        for (let j = 0; j < foo.length; j++) {
-            if (foo[i].value < foo[j].value) {
-                let tmp = foo[j].value;
-                foo[j].value = foo[i].value;
-                foo[i].value = tmp;
-            }
-        }
-    }
-    document.getElementById('test').innerHTML = " ";
-    return commonFunction();
-
+    foo.sort((a,b) =>  a.value - b.value)
+  return commonFunction();
 }
 commonFunction()
